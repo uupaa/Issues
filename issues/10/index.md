@@ -22,12 +22,13 @@ Android 5.0.0; Nexus 6 Build/LRX210
 
 1. setTimeout call.
 2. exec some canvas path API.
-3. clear all pixels.
+3. clear all pixels (The expected behavior is that still have the previous drawing).
 
-see [Nexus6 Canvas render failure movie](https://www.youtube.com/watch?v=pAMTDuwOuP0&list=UUW66XFfbYBBARSm9XPToBHw&index=1)
+This problem has occurred only in Nexus6.
 
-- 1st page is [good.html](./good.html).
-- 2nd page is [fail.html](./fail.html).
+- see [Nexus6 Canvas render failure movie](https://www.youtube.com/watch?v=pAMTDuwOuP0)
+    - 1st page is [good.html](./good.html).
+    - 2nd page is [fail.html](./fail.html).
 
 ### More Informations
 
