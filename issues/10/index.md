@@ -1,0 +1,42 @@
+## Summary
+
+GPU Accelerated Canvas is cleared after setTimeout.
+
+### Version
+
+Chrome Beta 40.0.2214.36
+
+### OS
+Android 5.0.0; Nexus 6 Build/LRX210
+
+### What steps will reproduce the problem?
+
+1. Chrome stable or Chrome beta run on Androidd 5.0.0 Nexus 6.
+2. open example [fail.html](./fail.html), pacman moves.
+
+### What is the expected behavior?
+
+[good.html](./good.html), display the three pacmans.
+
+### What went wrong?
+
+Clear all pixels, after the setTimeout function call.
+
+see [Nexus6 Canvas render failure movie](https://www.youtube.com/watch?v=pAMTDuwOuP0&list=UUW66XFfbYBBARSm9XPToBHw&index=1)
+
+- 1st page is [good.html](./good.html).
+- 2nd page is [fail.html](./fail.html).
+
+### More Informations
+
+- [good/fail demo page source code](https://gist.github.com/uupaa/bfd9b3d64e9719e7a9dc)
+- [Nexus6 Canvas render failure with Nexus7](http://youtu.be/eVK5WUI8Gnk)
+- ![](./assets/gpu0.png)
+- ![](./assets/gpu1.png)
+- ![](./assets/gpu2.png)
+- ![](./assets/gpu3.png)
+- ![](./assets/gpu4.png)
+- ![](./assets/gpu5.png)
+- ![](./assets/gpu6.png)
+- ![](./assets/gpu7.png)
+

@@ -1,31 +1,48 @@
-<body>
-<h1>Issue: Large size canvas is cleared after the setTimeout in Nexus 6.</h1>
+<h2>Summary</h2>
 
-<h2>Device, OS, Chrome Version</h2>
+<p>GPU Accelerated Canvas is cleared after setTimeout.</p>
 
-<p>Chrome Beta 40.0.2214.36 <br />
-Android 5.0.0; Nexus 6 Build/LRX210</p>
+<h3>Version</h3>
 
-<h2>What steps will reproduce the problem?</h2>
+<p>Chrome Beta 40.0.2214.36</p>
+
+<h3>OS</h3>
+
+<p>Android 5.0.0; Nexus 6 Build/LRX210</p>
+
+<h3>What steps will reproduce the problem?</h3>
 
 <ol>
-<li>Chrome or Chrome beta run on Nexus 6.</li>
-<li>open example <a href="./fail.html">fail.html</a></li>
+<li>Chrome stable or Chrome beta run on Androidd 5.0.0 Nexus 6.</li>
+<li>open example <a href="./fail.html">fail.html</a>, pacman moves.</li>
 </ol>
 
-<h2>What is the expected behavior?</h2>
+<h3>What is the expected behavior?</h3>
 
-<p><a href="./good.html">good.html</a></p>
+<p><a href="./good.html">good.html</a>, display the three pacmans.</p>
 
-<h2>What went wrong?</h2>
+<h3>What went wrong?</h3>
 
-<p>clear all content after the setTimeout function call.</p>
+<p>Clear all pixels, after the setTimeout function call.</p>
 
-<h2>Movie</h2>
+<p>see <a href="https://www.youtube.com/watch?v=pAMTDuwOuP0&amp;list=UUW66XFfbYBBARSm9XPToBHw&amp;index=1">Nexus6 Canvas render failure movie</a></p>
 
 <ul>
-<li><a href="https://www.youtube.com/watch?v=pAMTDuwOuP0&amp;list=UUW66XFfbYBBARSm9XPToBHw&amp;index=1">Nexus6 Canvas render failure</a></li>
-<li><a href="http://youtu.be/eVK5WUI8Gnk">Nexus6 Canvas render failure with Nexus7</a></li>
+<li>1st page is <a href="./good.html">good.html</a>.</li>
+<li>2nd page is <a href="./fail.html">fail.html</a>.</li>
 </ul>
-</body>
 
+<h3>More Informations</h3>
+
+<ul>
+<li><a href="https://gist.github.com/uupaa/bfd9b3d64e9719e7a9dc">good/fail demo page source code</a></li>
+<li><a href="http://youtu.be/eVK5WUI8Gnk">Nexus6 Canvas render failure with Nexus7</a></li>
+<li><img src="./assets/gpu0.png" alt="" title="" /></li>
+<li><img src="./assets/gpu1.png" alt="" title="" /></li>
+<li><img src="./assets/gpu2.png" alt="" title="" /></li>
+<li><img src="./assets/gpu3.png" alt="" title="" /></li>
+<li><img src="./assets/gpu4.png" alt="" title="" /></li>
+<li><img src="./assets/gpu5.png" alt="" title="" /></li>
+<li><img src="./assets/gpu6.png" alt="" title="" /></li>
+<li><img src="./assets/gpu7.png" alt="" title="" /></li>
+</ul>
