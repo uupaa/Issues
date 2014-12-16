@@ -14,7 +14,7 @@
 
 <ol>
 <li>Chrome stable or Chrome beta run on Androidd 5.0.0 Nexus 6.</li>
-<li>open example <a href="./fail.html">fail.html</a>, pacman moves.</li>
+<li>open example <a href="./fail.html">fail.html</a>, a pacman is moved to the right.</li>
 </ol>
 
 <h3>What is the expected behavior?</h3>
@@ -23,7 +23,11 @@
 
 <h3>What went wrong?</h3>
 
-<p>Clear all pixels, after the setTimeout function call.</p>
+<ol>
+<li>setTimeout call.</li>
+<li>exec some canvas path API.</li>
+<li>clear all pixels.</li>
+</ol>
 
 <p>see <a href="https://www.youtube.com/watch?v=pAMTDuwOuP0&amp;list=UUW66XFfbYBBARSm9XPToBHw&amp;index=1">Nexus6 Canvas render failure movie</a></p>
 
