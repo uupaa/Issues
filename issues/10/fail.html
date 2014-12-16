@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta charset="utf-8">
+<title>BAD CASE</title>
+<style>
+body { background-color: black }
+canvas { border:1px solid red }
+</style>
+</head><body>
+<a href="good.html">good</a> <a href="fail.html">fail</a><br />
+
+<!-- 
+w=200,h=400 -> failure
+w=200,h=350 -> failure
+w=200,h=329 -> failure
+================= threshold ===
+w=200,h=328 -> ok (200x328 = 65600 ≒ 65536)
+ -->
+<canvas width="200" height="400"></canvas>
+
+<script>
+window.onload = function() {
+    var ctx = document.querySelector("canvas").getContext("2d");
+    ctx.fillStyle = "yellow";
+
+    packman(ctx, 0, 0);
+
+    setTimeout(function() {
+        packman(ctx, 30, 0);
+    }, 1000);
+    setTimeout(function() {
+        packman(ctx, 60, 0);
+    }, 2000);
+}
+function packman(ctx, x, y) {
+    ctx.beginPath();
+    ctx.arc(x + 37, y + 37, 13, Math.PI / 7, -Math.PI / 7, false);
+    ctx.lineTo(x + 34, y + 37);
+    ctx.fill();
+}
+</script>
+</body></html>
