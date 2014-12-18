@@ -30,6 +30,11 @@ This problem has occurred only in Nexus 6.
     - 1st page is [good.html](./good.html).
     - 2nd page is [fail.html](./fail.html).
 
+### Additional tests.
+
+1. use requestAnimationFrame. [test page](./fail.raf.html) [movie](http://youtu.be/Yhbw8J31wyg)
+2. use requestAnimationFrame + drawImage. [test page](fail.raf.image.html) [movie](http://youtu.be/d162FZfETR4)
+
 ### More Informations
 
 - [good/fail demo page source code](https://gist.github.com/uupaa/bfd9b3d64e9719e7a9dc)
