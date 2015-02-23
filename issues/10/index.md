@@ -35,6 +35,15 @@ This problem has occurred only in Nexus 6.
 1. use requestAnimationFrame. [test page](./fail.raf.html) [movie](http://youtu.be/Yhbw8J31wyg)
 2. use requestAnimationFrame + drawImage. [test page](fail.raf.image.html) [movie](http://youtu.be/d162FZfETR4)
 
+### Additional tests (2015-02-23)
+
+I tried Chrome 41.0.2272.63. [movie](http://youtu.be/Pb2R8Zokp2U)
+
+Unfortunately, I looks like the situation is getting worse.
+
+The head of packman may disappear.
+
+
 ### More Informations
 
 - [good/fail demo page source code](https://gist.github.com/uupaa/bfd9b3d64e9719e7a9dc)
