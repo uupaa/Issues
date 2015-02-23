@@ -30,19 +30,17 @@ This problem has occurred only in Nexus 6.
     - 1st page is [good.html](./good.html).
     - 2nd page is [fail.html](./fail.html).
 
-### Additional tests.
+### Additional tests
 
-1. use requestAnimationFrame. [test page](./fail.raf.html) [movie](http://youtu.be/Yhbw8J31wyg)
-2. use requestAnimationFrame + drawImage. [test page](fail.raf.image.html) [movie](http://youtu.be/d162FZfETR4)
+- 2014-12-17
+    1. use requestAnimationFrame. [test page](./fail.raf.html) [movie](http://youtu.be/Yhbw8J31wyg)
+    2. use requestAnimationFrame + drawImage. [test page](fail.raf.image.html) [movie](http://youtu.be/d162FZfETR4)
 
-### Additional tests (2015-02-23)
-
-I tried Chrome 41.0.2272.63. [movie](http://youtu.be/Pb2R8Zokp2U)
-
-Unfortunately, I looks like the situation is getting worse.
-
-The head of packman may disappear.
-
+- 2015-02-23
+    1. Result of Chrome stable 40 was the same as last time.
+    2. Result of Chrome beta 41.0.2272.63. [movie](http://youtu.be/Pb2R8Zokp2U)
+        - Unfortunately, I looks like the situation is getting worse.
+        - The head of packman may disappear.
 
 ### More Informations
 
