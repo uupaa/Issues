@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=0.02,maximum-scale=1,user-scalable=no">
+<title></title></head><body>
+
+
+<hr />
+<p>Comparison image</p>
+<table>
+<tr>
+  <th>Mac Chrome<br />41.0.2272.104</th>
+  <th>Chrome for Android<br />Beta 42.0.2311.51</th>
+  <th>Mac Chrome<br />Canary 43.0.2351.3</th>
+</tr>
+<tr>
+  <td>
+  <img src="http://gyazo.com/8516f726409f25cf4ac65a1a8a991d5b.png"></img>
+  </td>
+  <td>
+  <img src="http://gyazo.com/091acee7c54e9b3d5b095c302bcc39e1.png"></img>
+  </td>
+  <td>
+  <img src="http://gyazo.com/43ee9346f9b82fcc62457989bf29bdea.png"></img>
+  </td>
+</tr>
+</table>
+
+
+<table>
+  <tr>
+    <th>original image</th>
+    <th>color effect</th>
+  </tr>
+  <tr>
+    <td><img id="img" src="a.png" style="width:256px;height:256px"></img>
+    </td>
+    <td><canvas id="canvas0" width="256" height="256"></canvas></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <table>
+        <tr>
+          <td>
+            multiple color<br />
+            R<input type="range" id="mr" min="0" max="1" value="1" step="0.01"><br />
+            G<input type="range" id="mg" min="0" max="1" value="1" step="0.01"><br />
+            B<input type="range" id="mb" min="0" max="1" value="1" step="0.01"><br />
+          </td>
+          <td>
+            add/sub color<br />
+            R<input type="range" id="ar" min="-255" max="255"><br />
+            G<input type="range" id="ag" min="-255" max="255"><br />
+            B<input type="range" id="ab" min="-255" max="255"><br />
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<hr />
+<p>multiple color</p>
+<table>
+  <tr>
+    <th>original image </th>
+    <th>multipleColor(1, 0, 0) </th>
+    <th>multipleColor(0, 1, 0) </th>
+    <th>multipleColor(0, 0, 1) </th>
+  </tr>
+  <tr>
+    <td><img src="a.png" style="width:256px;height:256px"></img></td>
+    <td><canvas id="canvas10" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas11" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas12" width="256" height="256"></canvas></td>
+  </tr>
+  <tr>
+    <th>Damage effect<br />multipleColor(1.0, 0.4, 0.4) </th>
+    <th>Fadeout<br />multipleColor(0.8, 0.8, 0.8)</th>
+    <th>Fadeout<br />multipleColor(0.5, 0.5, 0.5)</th>
+    <th>Fadeout<br />multipleColor(0.2, 0.2, 0.2)</th>
+  </tr>
+  <tr>
+    <th><canvas id="canvas17" width="256" height="256"></canvas></th>
+    <th><canvas id="canvas13" width="256" height="256"></canvas></th>
+    <th><canvas id="canvas14" width="256" height="256"></canvas></th>
+    <th><canvas id="canvas15" width="256" height="256"></canvas></th>
+  </tr>
+</table>
+
+<hr />
+<p>add color</p>
+<table>
+  <tr>
+    <th>original image</th>
+    <th>addColor(255, 0, 0)</th>
+    <th>addColor(0, 255, 0)</th>
+    <th>addColor(0, 0, 255)</th>
+  </tr>
+  <tr>
+    <th><img src="a.png" style="width:256px;height:256px"></img></th>
+    <th><canvas id="canvas20" width="256" height="256"></canvas></th>
+    <th><canvas id="canvas21" width="256" height="256"></canvas></th>
+    <th><canvas id="canvas22" width="256" height="256"></canvas></th>
+  </tr>
+</table>
+
+<hr />
+<p>subtract color</p>
+<table>
+  <tr>
+    <th>original image</th>
+  </tr>
+  <tr>
+    <td><img src="a.png" style="width:256px;height:256px"></img></td>
+  </tr>
+  <tr>
+    <th>R * 0.5 </th>
+    <th>R * 0.0 </th>
+  </tr>
+  <tr>
+    <td><canvas id="canvas30" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas31" width="256" height="256"></canvas></td>
+  </tr>
+  <tr>
+    <th>G * 0.5 </th>
+    <th>G * 0.0 </th>
+  </tr>
+  <tr>
+    <td><canvas id="canvas32" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas33" width="256" height="256"></canvas></td>
+  </tr>
+  <tr>
+    <th>B * 0.5 </th>
+    <th>B * 0.0 </th>
+  </tr>
+  <tr>
+    <td><canvas id="canvas34" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas35" width="256" height="256"></canvas></td>
+  </tr>
+  <tr>
+    <th>(R and G) * 0.5 </th>
+    <th>(G and B) * 0.5 </th>
+    <th>(B and R) * 0.5 </th>
+    <th>(R and G and B) * 0.0</th>
+  </tr>
+  <tr>
+    <td><canvas id="canvas36" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas37" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas38" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas39" width="256" height="256"></canvas></td>
+  </tr>
+</table>
+
+<hr />
+<p>subtract color(use darker)</p>
+
+<table>
+  <tr>
+    <th>original image</th>
+    <th>subColor(255, 0, 0)</th>
+    <th>subColor(0, 255, 0)</th>
+    <th>subColor(0, 0, 255)</th>
+  </tr>
+  <tr>
+    <td><img src="a.png" style="width:256px;height:256px"></img></td>
+    <td><canvas id="canvas40" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas41" width="256" height="256"></canvas></td>
+    <td><canvas id="canvas42" width="256" height="256"></canvas></td>
+  </tr>
+</table>
+
+<script src="a.js"></script>
+
+</body></html>
+
+
