@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><title></title></head><body>
+
+<style>p { font-size: 400% }</style>
+<script>
+var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+var trigger = (Date.now() % 2) ? "touchstart" : "touchend";
+document.body.style.backgroundColor = /start/.test(trigger) ? "red" : "lime";
+document.body.innerHTML += '<p>addEventListener("' + trigger + '")</p>';
+
+
+document.body.addEventListener(trigger, function() {
+  var source = createWhiteNoise(audioContext, 1.0); // 1sec
+  source.connect(audioContext.destination);
+  source.start(0);
+});
+
+
+
+function createWhiteNoise(audioContext, sec) {
+  var channels = 2;
+  var frameCount = audioContext.sampleRate * sec;
+  var buffer = audioContext.createBuffer(2, frameCount, audioContext.sampleRate);
+
+  for (var channel = 0; channel < channels; channel++) {
+    var nowBuffering = buffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
+  }
+  var source = audioContext.createBufferSource();
+  source.buffer = buffer;
+  return source;
+}
+
+</script>
+</body>
+

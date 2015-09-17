@@ -1,0 +1,27 @@
+<h2>Summary</h2>
+
+<p>iOS 9 Safari WebAudio::AudioBufferSourceNode does not play in touchstart event.</p>
+
+<h3>OS Version</h3>
+<p>iOS 9.0 - 9.1 beta</p>
+
+<h3>Devices</h3>
+<p>iPhone 4s and iPhone 5. I have not tried in the other device.</p>
+
+<h3>What steps will reproduce the problem?</h3>
+
+<ol>
+<li>Open <a href="https://uupaa.github.io/Issues/issues/13/index.html">https://uupaa.github.io/Issues/issues/13/index.html</a> in your iOS Device.</li>
+<li>Screen should become green or red. Green uses touchend, red uses a touchstart.</li>
+<li>White noise is played when you touch the text. If the screen is red, does not play it.</li>
+</ol>
+
+<h3>What is the expected behavior?</h3>
+
+<p>AFAIK current playback regulation is <a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html">User Control of Downloads Over Cellular Networks</a>.</p>
+<p>I hope to more clearly the iOS Safari media playback specifications.</p>
+
+<h3>What went wrong?</h3>
+
+<p>There is a difference in behavior in iOS 8 and iOS 9.</p>
+
